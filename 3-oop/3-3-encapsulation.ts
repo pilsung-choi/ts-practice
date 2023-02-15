@@ -25,14 +25,14 @@
     fillCoffeeBeans(beans: number) {
       // coffeeBeans를 감추고 내부 메서드로 커피콩을 추가함으로서 은닉화 (안정성up)
       if (beans < 0) {
-        throw new Error("value for beans shoud be greater than 0");
+        throw new Error('value for beans shoud be greater than 0');
       }
       this.coffeeBeans += beans;
     }
 
     makeCoffee(shots: number): CoffeeCup {
       if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAM_PER_SHOT) {
-        throw new Error("Not enough coffee beans!");
+        throw new Error('Not enough coffee beans!');
       }
       this.coffeeBeans -= shots * CoffeeMaker.BEANS_GRAM_PER_SHOT;
       return {
@@ -57,7 +57,7 @@
     }
     set age(num: number) {
       if (num < 0) {
-        throw new Error(" - age");
+        throw new Error(' - age');
       }
       this.internalAge = num;
     }
@@ -76,7 +76,8 @@
   //   constructor(private firstName: string, private lastname: string) {}
   // }
 
-  const user = new User("steve", "jobs");
+  const user = new User('steve', 'jobs');
   console.log(user.fullName);
-  user.age = 6;
+  //user.age = 6;
+  console.log(user);
 }
