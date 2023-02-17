@@ -87,7 +87,7 @@
     }
   }
 
-  const machine: CoffeeMaker[] = [
+  const machines: CoffeeMaker[] = [
     new CoffeeMachine(16),
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
@@ -95,7 +95,7 @@
     new CaffeLatteMachine(16, '1'),
     new SweetCoffeeMaker(16),
   ];
-  machine.forEach((machine) => {
+  machines.forEach((machine) => {
     console.log('-------------------');
     machine.makeCoffee(1);
   });
